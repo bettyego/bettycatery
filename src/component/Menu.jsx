@@ -22,7 +22,7 @@ const Menu = () => {
         </div>
       </section>
 
-      <section className=" overlay h-screen w-full bg-cover bg-center" style={{ backgroundImage: 'url(//pexels-dana-tentis-118658-1239347.jpg)' }}>
+      <section className=" overlay h-screen w-full bg-cover bg-center" style={{ backgroundImage: 'url(/pexels-dana-tentis-118658-1239347.jpg)' }}>
         <div className="container mx-auto p-6 mt-32 flex flex-col justify-center items-center z-10">
           <h1 className="text-5xl font-bold mb-4 text-white z-10">BETTY MENU'S - CATERING SERVICE WEBSITE PAGE</h1>
           <div className="flex justify-center space-x-4 ">
