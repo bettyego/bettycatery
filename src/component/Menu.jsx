@@ -15,14 +15,14 @@ const Menu = () => {
     
       <section className="bg-gray-800 text-white  w-full">
         <div className="w-full  flex justify-between items-center py-2 ">
-          <img src="/src/assets/cater.svg" alt="" className="w-36  " />
+          <img src="//cater.svg" alt="" className="w-36  " />
           <div>
           <Link to='/subt' className="bg-green-500 hover:bg-gray-200 text-white font-sans mr-6 py-1 px-4 rounded">subscribe</Link>
           </div>
         </div>
       </section>
 
-      <section className=" overlay h-screen w-full bg-cover bg-center" style={{ backgroundImage: 'url(/src/assets/pexels-dana-tentis-118658-1239347.jpg)' }}>
+      <section className=" overlay h-screen w-full bg-cover bg-center" style={{ backgroundImage: 'url(//pexels-dana-tentis-118658-1239347.jpg)' }}>
         <div className="container mx-auto p-6 mt-32 flex flex-col justify-center items-center z-10">
           <h1 className="text-5xl font-bold mb-4 text-white z-10">BETTY MENU'S - CATERING SERVICE WEBSITE PAGE</h1>
           <div className="flex justify-center space-x-4 ">
@@ -78,28 +78,28 @@ const Menu = () => {
      navigation={true} modules={[Navigation]}
     >
       <SwiperSlide className=' w-full h-auto'>
-      <img src="src/assets/pexels-annl-2284604.jpg" alt="style =" className="w-full h-screen 0bject-cover  rounded-2xl mx-auto " />
+      <img src="/pexels-annl-2284604.jpg" alt="style =" className="w-full h-screen 0bject-cover  rounded-2xl mx-auto " />
       </SwiperSlide>
       <SwiperSlide>
-      <img src="src/assets/pexels-enesfilm-8360218.jpg" alt="" className="  w-full h-screen object-cover  rounded-2xl mx-auto" />
+      <img src="/pexels-enesfilm-8360218.jpg" alt="" className="  w-full h-screen object-cover  rounded-2xl mx-auto" />
       </SwiperSlide>
       <SwiperSlide>
-      <img src="src/assets/istockphoto-498311434-612x612.jpg" alt="" className="  w-full h-screen object-cover  rounded-2xl mx-auto" />
+      <img src="/istockphoto-498311434-612x612.jpg" alt="" className="  w-full h-screen object-cover  rounded-2xl mx-auto" />
       </SwiperSlide>
       <SwiperSlide>
-      <img src="src/assets/pexels-iamabdullahsheik-10480254.jpg" alt="" className="  w-full h-screen object-cover  rounded-2xl mx-auto" />
+      <img src="/pexels-iamabdullahsheik-10480254.jpg" alt="" className="  w-full h-screen object-cover  rounded-2xl mx-auto" />
       </SwiperSlide>
       <SwiperSlide>
-      <img src="src/assets/pexels-jonathanborba-29098366.jpg" alt="" className="  w-full h-screen object-cover  rounded-2xl mx-auto" />
+      <img src="/pexels-jonathanborba-29098366.jpg" alt="" className="  w-full h-screen object-cover  rounded-2xl mx-auto" />
       </SwiperSlide>
       <SwiperSlide>
-      <img src="src/assets/pexels-lum3n-44775-1410235.jpg" alt="" className="  w-full h-screen object-cover  rounded-2xl mx-auto" />
+      <img src="/pexels-lum3n-44775-1410235.jpg" alt="" className="  w-full h-screen object-cover  rounded-2xl mx-auto" />
       </SwiperSlide>
       <SwiperSlide>
-      <img src="src/assets/istockphoto-1386533522-612x612.jpg" alt="" className="  w-full h-screen object-cover  rounded-2xl mx-auto" />
+      <img src="/istockphoto-1386533522-612x612.jpg" alt="" className="  w-full h-screen object-cover  rounded-2xl mx-auto" />
       </SwiperSlide>
       <SwiperSlide>
-      <img src="src/assets/pexels-juliomelanda-1448721.jpg" alt="" className="  w-full h-screen object-cover  rounded-2xl mx-auto" />
+      <img src="/pexels-juliomelanda-1448721.jpg" alt="" className="  w-full h-screen object-cover  rounded-2xl mx-auto" />
 
       </SwiperSlide>
     </Swiper>
@@ -154,39 +154,39 @@ const Menu = () => {
         <p className="mb-4 text-center">You can also choose one of these items if you like:</p>
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4' >
           <div className=''>
-            <img src="src/assets/pexels-meruyert-gonullu-6161669.jpg" alt="" className='w-20 md:w-64  h-40  rounded-2xl shadow-slate-400 mb-2 object-cover' />
-            <img src="src/assets/pexels-the-castlebar-3902897-19107140.jpg" alt="" className='w-20 md:w-64  h-40  rounded-2xl shadow-slate-400 object-cover' />
+            <img src="/pexels-meruyert-gonullu-6161669.jpg" alt="" className='w-20 md:w-64  h-40  rounded-2xl shadow-slate-400 mb-2 object-cover' />
+            <img src="/pexels-the-castlebar-3902897-19107140.jpg" alt="" className='w-20 md:w-64  h-40  rounded-2xl shadow-slate-400 object-cover' />
           <p> Christmas (Turkey, Ham, Mashed Potatoes)
           </p>
           </div>
           <div>
-            <img src="src/assets/pexels-karography-438592595-16331112.jpg" alt="" className='w-20 md:w-64  h-40  rounded-2xl shadow-slate-400 mb-2 object-cover' />
-            <img src="src/assets/pexels-rachel-claire-4577167.jpg" alt="" className='w-20 md:w-64  h-40  rounded-2xl shadow-slate-400 object-cover' />
+            <img src="/pexels-karography-438592595-16331112.jpg" alt="" className='w-20 md:w-64  h-40  rounded-2xl shadow-slate-400 mb-2 object-cover' />
+            <img src="/pexels-rachel-claire-4577167.jpg" alt="" className='w-20 md:w-64  h-40  rounded-2xl shadow-slate-400 object-cover' />
             <p>Thanksgiving (Gravy, Potatoes, Gravy)
           </p>
           </div>
           <div>
-            <img src="src/assets/pexels-matheus-lara-1785960246-29111982.jpg" alt="" className='w-20 md:w-64  h-40  rounded-2xl shadow-slate-400 mb-2 object-cover'/>
-            <img src="src/assets/pexels-daisy-anderson-5584276.jpg" alt=""  className='w-20 md:w-64  h-40  rounded-2xl shadow-slate-400'/>
+            <img src="/pexels-matheus-lara-1785960246-29111982.jpg" alt="" className='w-20 md:w-64  h-40  rounded-2xl shadow-slate-400 mb-2 object-cover'/>
+            <img src="/pexels-daisy-anderson-5584276.jpg" alt=""  className='w-20 md:w-64  h-40  rounded-2xl shadow-slate-400'/>
             <p>Halloween (Spooky Finger Foods)
           </p>
           </div>
           <div>
-            <img src="src/assets/pexels-vlada-karpovich-7561328.jpg" alt=""  className='w-20 md:w-64  h-40  rounded-2xl shadow-slate-400 mb-2 object-cover'/>
-            <img src="src/assets/pexels-jonathanborba-4599123.jpg" alt=""  className='w-20 md:w-64  h-40  rounded-2xl shadow-slate-400'/>
+            <img src="/pexels-vlada-karpovich-7561328.jpg" alt=""  className='w-20 md:w-64  h-40  rounded-2xl shadow-slate-400 mb-2 object-cover'/>
+            <img src="/pexels-jonathanborba-4599123.jpg" alt=""  className='w-20 md:w-64  h-40  rounded-2xl shadow-slate-400'/>
             <p>
             Anniversary
           </p>
           </div>
           <div>
-            <img src="src/assets/pexels-pnw-prod-8995668.jpg" alt="" className='w-20 md:w-64  h-40  rounded-2xl shadow-slate-400 mb-2 object-cover' />
-            <img src="src/assets/pexels-viniciusvieirafotografia-19763212.jpg" alt="" className='w-20 md:w-64  h-40  rounded-2xl shadow-slate-400'/>
+            <img src="/pexels-pnw-prod-8995668.jpg" alt="" className='w-20 md:w-64  h-40  rounded-2xl shadow-slate-400 mb-2 object-cover' />
+            <img src="/pexels-viniciusvieirafotografia-19763212.jpg" alt="" className='w-20 md:w-64  h-40  rounded-2xl shadow-slate-400'/>
             <p>Valentine's Day (Romantic Dinner)
             </p>
           </div>
           <div className=''>
-            <img src="src/assets/pexels-nicole-michalou-5779181.jpg" alt="" className='w-20 md:w-64  h-40  rounded-2xl shadow-slate-400 gap mb-2 object-cover'/>
-            <img src="src/assets/pexels-mathew-thomas-318779-10661278.jpg" alt="" className='w-20 md:w-64  h-40  rounded-2xl shadow-slate-400'/>
+            <img src="/pexels-nicole-michalou-5779181.jpg" alt="" className='w-20 md:w-64  h-40  rounded-2xl shadow-slate-400 gap mb-2 object-cover'/>
+            <img src="/pexels-mathew-thomas-318779-10661278.jpg" alt="" className='w-20 md:w-64  h-40  rounded-2xl shadow-slate-400'/>
             <p>New Year's Eve 
             </p>
           </div>
@@ -214,7 +214,7 @@ const Menu = () => {
       {/* Logo Section */}
       <section className="container mx-auto p-4 md:p-6 lg:p-8  ">
         <div className="flex justify-center items-center">
-          <img src="src/assets/fork.png" alt="" className="w-48 " />
+          <img src="/fork.png" alt="" className="w-48 " />
         </div>
       </section>
 
