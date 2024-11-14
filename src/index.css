@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.overlay{
+    position: relative;
+}
+.overlay::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.607);
+    height: 100%;
+    top:0;
+    left :0;
+}
