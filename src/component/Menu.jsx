@@ -15,9 +15,9 @@ const Menu = () => {
     
       <section className="bg-gray-800 text-white  w-full">
         <div className="w-full  flex justify-between items-center py-2 ">
-          <img src="//cater.svg" alt="" className="w-36  " />
+          <img src="/my ct.jpg" alt="Betty Catery Logo" className="w-36 h-36 object-cover rounded-full" />
           <div>
-          <Link to='/subt' className="bg-green-500 hover:bg-gray-200 text-white font-sans mr-6 py-1 px-4 rounded">subscribe</Link>
+          <Link to='/sub' className="bg-green-500 hover:bg-gray-200 text-white font-sans mr-6 py-1 px-4 rounded">subscribe</Link>
           </div>
         </div>
       </section>

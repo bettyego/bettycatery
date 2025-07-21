@@ -1,95 +1,160 @@
-import Swal from "sweetalert2";
-import { useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useState } from 'react';
+import { useNavigate, Link } from 'react-router-dom';
+import Swal from 'sweetalert2';
+import Layout from '../components/layout/Layout';
+import Card from '../components/ui/Card';
+import Button from '../components/ui/Button';
+import Input from '../components/ui/Input';
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
+
   const handleSubmit = async(e) => {
     e.preventDefault();
-    // const createUser = () => {
-    //   Betty({ email, password });
-    // };
-  
-    const request =  await fetch('http://localhost:5000/login',{
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ email: email, password: password }),
-    });
+    setIsLoading(true);
 
-    const response  = await request.json();
-    localStorage.setItem("token", response.token);
+    try {
+      const request = await fetch('http://localhost:5000/login',{
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email: email, password: password }),
+      });
 
-    response && 
+      const response = await request.json();
+
+      if (response.token) {
+        localStorage.setItem("token", response.token);
+
+        Swal.fire({
+          position: "top-end",
+          icon: "success",
+          title: "Login successful",
+          showConfirmButton: false,
+          timer: 1500
+        });
+
+        navigate('/dashboard');
+      } else {
+        throw new Error('Login failed');
+      }
+    } catch (error) {
       Swal.fire({
         position: "top-end",
-        icon: "success",
-        title: "login successful",
+        icon: "error",
+        title: "Login failed",
+        text: "Please check your credentials and try again",
         showConfirmButton: false,
-        timer: 1500
-      })
-      navigate('/dashboard')
-       
+        timer: 2000
+      });
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
-    <div className="max-w-sm bg-gradient-to-b from-white to-[#f4f7fb] rounded-3xl p-6 border-5 border-white shadow-lg mx-4">
-      <div className="text-center font-bold text-2xl text-[#1089d3]">Sign In</div>
-      <form onSubmit={handleSubmit} className="mt-5">
-        <input 
-          required 
-          className="w-full bg-white border-0 p-4 rounded-2xl mt-4 shadow-md" 
-          type="email" 
-          name="email" 
-          id="email" 
-          placeholder="E-mail" 
-          value={email} 
-          onChange={(e) => setEmail(e.target.value)} 
-        />
-        <input 
-          required 
-          className="w-full bg-white border-0 p-4 rounded-2xl mt-4 shadow-md" 
-          type="password" 
-          name="password" 
-          id="password" 
-          placeholder="Password" 
-          value={password} 
-          onChange={(e) => setPassword(e.target.value)} 
-        />
-        <span className="block mt-2 ml-2">
-          <a href="#" className="text-xs text-[#0099ff] decoration-none">Forgot Password ?</a>
-        </span>
-        <input 
-          className="block w-full font-bold bg-gradient-to-r from-[#1089d3] to-[#12b1d1] text-white py-3 px-6 rounded-2xl shadow-lg mt-5 transition-all duration-200 ease-in-out" 
-          type="submit" 
-          value="Sign In" 
-        />
-      </form>
-      <div className="mt-6">
-        <span className="text-center text-xs text-gray-500">Or Sign in with</span>
-        <div className="flex justify-center gap-4 mt-2">
-          <button className="bg-gradient-to-r from-black to-[#707070] border-2 border-white p-2 rounded-full w-10 aspect-square flex justify-center items-center shadow-md transition-all duration-200 ease-in-out">
-            <svg className="fill-white" xmlns="(link unavailable)" height="1em" viewBox="0 0 488 512">
-            
-            </svg>
-          </button>
-          <button className="bg-gradient-to-r from-black to-[#707070] border-2 border-white p-2 rounded-full w-10 aspect-square flex justify-center items-center shadow-md transition-all duration-200 ease-in-out">
-            <svg className="fill-white" xmlns="(link unavailable)" height="1em" viewBox="0 0 384 512">
-              
-            </svg>
-          </button>
-          <button className="bg-gradient-to-r from-black to-[#707070] border-2 border-white p-2 rounded-full w-10 aspect-square flex justify-center items-center shadow-md transition-all duration-200 ease-in-out">
-            <svg className="fill-white" xmlns="(link unavailable)" height="1em" viewBox="0 0 512 512">
-              
-            </svg>
-          </button>
+    <Layout showHeader={false} showFooter={false}>
+      <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-md w-full space-y-8">
+          {/* Header */}
+          <div className="text-center">
+            <Link to="/" className="flex items-center justify-center mb-6">
+              <img
+                src="/my ct.jpg"
+                alt="Lady B's Catering Service"
+                className="h-12 w-12 object-cover rounded-full"
+              />
+              <span className="ml-2 text-2xl font-bold text-gray-900 font-luxury">
+                Lady B's Catering Service
+              </span>
+            </Link>
+            <h2 className="text-3xl font-bold text-gray-900 mb-2">
+              Welcome Back
+            </h2>
+            <p className="text-gray-600">
+              Sign in to access your luxury catering dashboard
+            </p>
+          </div>
+
+          {/* Login Form */}
+          <Card padding="lg">
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <Input
+                label="Email Address"
+                type="email"
+                name="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="Enter your email"
+                required
+              />
+
+              <Input
+                label="Password"
+                type="password"
+                name="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                placeholder="Enter your password"
+                required
+              />
+
+              <div className="flex items-center justify-between">
+                <div className="flex items-center">
+                  <input
+                    id="remember-me"
+                    name="remember-me"
+                    type="checkbox"
+                    className="h-4 w-4 text-purple-600 focus:ring-purple-500 border-gray-300 rounded"
+                  />
+                  <label htmlFor="remember-me" className="ml-2 block text-sm text-gray-900">
+                    Remember me
+                  </label>
+                </div>
+
+                <div className="text-sm">
+                  <a href="#" className="font-medium text-purple-600 hover:text-purple-500">
+                    Forgot your password?
+                  </a>
+                </div>
+              </div>
+
+              <Button
+                type="submit"
+                variant="primary"
+                size="lg"
+                className="w-full"
+                loading={isLoading}
+              >
+                {isLoading ? 'Signing in...' : 'Sign In'}
+              </Button>
+            </form>
+
+            <div className="mt-6">
+              <div className="relative">
+                <div className="absolute inset-0 flex items-center">
+                  <div className="w-full border-t border-gray-300" />
+                </div>
+                <div className="relative flex justify-center text-sm">
+                  <span className="px-2 bg-white text-gray-500">New to Lady B's Catering Service?</span>
+                </div>
+              </div>
+
+              <div className="mt-6 text-center">
+                <Link
+                  to="/contact"
+                  className="font-medium text-purple-600 hover:text-purple-500"
+                >
+                  Contact us to get started
+                </Link>
+              </div>
+            </div>
+          </Card>
         </div>
       </div>
-      <span className="text-center mt-4">
-        <a href="#" className="text-xs text-[#0099ff] decoration-none">Learn user licence agreement</a>
-      </span>
-    </div>
+    </Layout>
   );
 };
 
