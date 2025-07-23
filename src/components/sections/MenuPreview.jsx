@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import 'swiper/css';
@@ -9,6 +10,7 @@ import Card from '../ui/Card';
 
 const MenuPreview = () => {
   const [activeCategory, setActiveCategory] = useState('appetizers');
+  const navigate = useNavigate();
 
   const categories = [
     { id: 'appetizers', name: 'Appetizers', count: 12 },
@@ -61,11 +63,11 @@ const MenuPreview = () => {
   };
 
   const featuredImages = [
+    '/ctg2.jpg',
     '/pexels-jonathanborba-4599123.jpg',
     '/pexels-pnw-prod-8995668.jpg',
     '/pexels-viniciusvieirafotografia-19763212.jpg',
-    '/pexels-nicole-michalou-5779181.jpg',
-    '/pexels-mathew-thomas-318779-10661278.jpg'
+    '/pexels-nicole-michalou-5779181.jpg'
   ];
 
   return (
@@ -161,7 +163,11 @@ const MenuPreview = () => {
 
         {/* CTA */}
         <div className="text-center">
-          <Button variant="primary" size="lg">
+          <Button
+            variant="primary"
+            size="lg"
+            onClick={() => navigate('/menu')}
+          >
             View Full Menu
           </Button>
         </div>

@@ -25,7 +25,7 @@ const ServicesSection = () => {
       title: 'Wedding Catering',
       description: 'Make your special day unforgettable with our elegant wedding catering services.',
       features: ['Bridal tastings', 'Custom menus', 'Full service', 'Cake & desserts'],
-      image: '/pexels-jonathanborba-29098366.jpg',
+      image: '/ctg2.jpg',
       color: 'bg-pink-500'
     },
     {
@@ -33,7 +33,7 @@ const ServicesSection = () => {
       title: 'Private Events',
       description: 'Intimate gatherings and private parties with personalized service.',
       features: ['Birthday parties', 'Anniversary dinners', 'Family reunions', 'Celebrations'],
-      image: '/pexels-daisy-anderson-5584276.jpg',
+      image: '/ctg6.jpg',
       color: 'bg-purple-500'
     },
     {

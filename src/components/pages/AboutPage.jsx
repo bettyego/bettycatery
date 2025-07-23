@@ -1,4 +1,3 @@
-import React from 'react';
 import Layout from '../layout/Layout';
 import Card from '../ui/Card';
 import Button from '../ui/Button';
@@ -92,9 +91,9 @@ const AboutPage = () => {
               </Button>
             </div>
             <div className="relative">
-              <img 
-                src="/pexels-dana-tentis-118658-1239347.jpg" 
-                alt="Betty Catery Team"
+              <img
+                src="/ctg2.jpg"
+                alt="Lady B's Catering Service - Wedding Setup"
                 className="rounded-2xl shadow-2xl"
               />
             </div>
@@ -106,12 +105,14 @@ const AboutPage = () => {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
+            <div className="relative">
+              <div>
               <img 
-                src="/pexels-jonathanborba-4599123.jpg" 
+                src="/story.jpg" 
                 alt="Our Kitchen"
-                className="rounded-2xl shadow-lg"
+                className="rounded-2xl shadow-lg "
               />
+            </div>
             </div>
             <div>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
@@ -119,20 +120,25 @@ const AboutPage = () => {
               </h2>
               <div className="space-y-4 text-gray-600 leading-relaxed">
                 <p>
-                  Founded in 2020 by Betty Nwabethroseonu, Betty Catery began as a passion project 
-                  to bring restaurant-quality food and professional service to private events 
-                  and corporate functions.
+                  My culinary journey began in university, where I noticed a common struggle among students.
+                  Many found it challenging to cook meals for themselves, opting instead for quick snacks
+                  like Indomie or packaged treats. I saw an opportunity to make a difference and decided
+                  to take action. With a passion for cooking, I started preparing homemade meals and
+                  delivering them to students, making their lives easier one meal at a time.
                 </p>
                 <p>
-                  What started as a small catering operation has grown into a trusted partner 
-                  for hundreds of clients across the region. Our commitment to quality, 
-                  creativity, and exceptional service has made us the go-to choice for 
-                  discerning hosts and event planners.
+                  As my service grew, so did my interest in exploring the world of catering. I began
+                  delivering meals beyond the university campus, to busy professionals, homes, and event
+                  hosts. Whether it was preparing weekend meals, handling cooking duties for parties,
+                  or catering to individuals with special events, I was determined to provide delicious,
+                  convenient solutions.
                 </p>
                 <p>
-                  Today, we're proud to serve a diverse clientele, from intimate family 
-                  gatherings to large corporate events, always maintaining our core values 
-                  of quality, reliability, and customer satisfaction.
+                  My business gradually expanded, and I developed a range of menus to suit different
+                  tastes and preferences. From hearty meals to elegant party cuisine, my goal was to
+                  deliver exceptional food and exceptional service. Through hard work and dedication,
+                  I built a reputation as a reliable and skilled caterer, and my passion for cooking
+                  continues to drive me forward.
                 </p>
               </div>
             </div>

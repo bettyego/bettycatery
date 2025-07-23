@@ -62,20 +62,18 @@ const SEOHead = ({
       "name": "Lady B's Catering Service",
       "description": description,
       "url": url,
-      "telephone": "+1-555-123-4567",
-      "email": "info@ladybscatering.com",
+      "telephone": "+234-806-411-1501",
+      "email": "nwabethroseonuoha@gmail.com",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "123 Catering Street",
-        "addressLocality": "Food City",
-        "addressRegion": "FC",
-        "postalCode": "12345",
-        "addressCountry": "US"
+        "addressLocality": "Abuja",
+        "addressRegion": "Federal Capital Territory",
+        "addressCountry": "Nigeria"
       },
       "geo": {
         "@type": "GeoCoordinates",
-        "latitude": "40.7128",
-        "longitude": "-74.0060"
+        "latitude": "9.0765",
+        "longitude": "7.3986"
       },
       "openingHours": [
         "Mo-Fr 08:00-20:00",
@@ -86,9 +84,9 @@ const SEOHead = ({
       "image": image,
       "logo": "/my ct.jpg",
       "sameAs": [
-        "https://www.facebook.com/ladybscatering",
-        "https://www.instagram.com/ladybscatering",
-        "https://www.twitter.com/ladybscatering"
+        "https://www.facebook.com/share/1ApYd8KChU/?mibextid=wwXIfr",
+        "https://www.instagram.com/be.thel1513?igsh=YmVmNHB4ejUzbXVx",
+        "https://www.linkedin.com/in/onuoha-mba-bethel-nwakaego-07987b368?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
       ]
     };
 

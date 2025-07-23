@@ -9,12 +9,13 @@ const MenuPage = () => {
   const [searchTerm, setSearchTerm] = useState('');
 
   const categories = [
-    { id: 'all', name: 'All Items', count: 53 },
-    { id: 'appetizers', name: 'Appetizers', count: 12 },
-    { id: 'entrees', name: 'Main Courses', count: 18 },
-    { id: 'sides', name: 'Side Dishes', count: 10 },
-    { id: 'desserts', name: 'Desserts', count: 8 },
-    { id: 'beverages', name: 'Beverages', count: 15 }
+    { id: 'all', name: 'All Items', count: 25 },
+    { id: 'appetizers', name: 'Appetizers', count: 6 },
+    { id: 'entrees', name: 'Main Courses', count: 8 },
+    { id: 'wedding', name: 'Wedding Packages', count: 2 },
+    { id: 'sides', name: 'Side Dishes', count: 4 },
+    { id: 'desserts', name: 'Desserts', count: 3 },
+    { id: 'beverages', name: 'Beverages', count: 2 }
   ];
 
   const menuItems = [
@@ -49,9 +50,39 @@ const MenuPage = () => {
       dietary: ['vegetarian'],
       servingSize: 'Per piece'
     },
-    // Main Courses
     {
       id: 4,
+      category: 'appetizers',
+      name: 'Shrimp Cocktail Platter',
+      description: 'Fresh jumbo shrimp served with cocktail sauce and lemon',
+      price: 8.50,
+      image: '/ctg3.jpg',
+      dietary: ['gluten-free'],
+      servingSize: 'Per piece'
+    },
+    {
+      id: 5,
+      category: 'appetizers',
+      name: 'Artisan Cheese Board',
+      description: 'Selection of premium cheeses with crackers, nuts, and fruits',
+      price: 12.00,
+      image: '/ctg4.jpg',
+      dietary: ['vegetarian'],
+      servingSize: 'Per platter'
+    },
+    {
+      id: 6,
+      category: 'appetizers',
+      name: 'Smoked Salmon Canapés',
+      description: 'Delicate canapés with smoked salmon, cream cheese, and dill',
+      price: 6.75,
+      image: '/ctg5.jpg',
+      dietary: ['gluten-free'],
+      servingSize: 'Per piece'
+    },
+    // Main Courses
+    {
+      id: 7,
       category: 'entrees',
       name: 'Herb-Crusted Salmon',
       description: 'Atlantic salmon with lemon herb butter and seasonal vegetables',
@@ -61,7 +92,7 @@ const MenuPage = () => {
       servingSize: 'Per person'
     },
     {
-      id: 5,
+      id: 8,
       category: 'entrees',
       name: 'Prime Beef Tenderloin',
       description: 'Grilled to perfection with garlic mashed potatoes',
@@ -71,7 +102,7 @@ const MenuPage = () => {
       servingSize: 'Per person'
     },
     {
-      id: 6,
+      id: 9,
       category: 'entrees',
       name: 'Vegetarian Lasagna',
       description: 'Layers of pasta with roasted vegetables and ricotta cheese',
@@ -80,9 +111,121 @@ const MenuPage = () => {
       dietary: ['vegetarian'],
       servingSize: 'Per person'
     },
+    {
+      id: 10,
+      category: 'entrees',
+      name: 'Roasted Chicken Supreme',
+      description: 'Free-range chicken breast with wild mushroom sauce',
+      price: 24.00,
+      image: '/ctg7.jpg',
+      dietary: ['gluten-free'],
+      servingSize: 'Per person'
+    },
+    {
+      id: 11,
+      category: 'entrees',
+      name: 'Pan-Seared Duck Breast',
+      description: 'Duck breast with cherry glaze and roasted root vegetables',
+      price: 32.00,
+      image: '/istockphoto-1057297086-1024x1024.jpg',
+      dietary: ['gluten-free'],
+      servingSize: 'Per person'
+    },
+    {
+      id: 12,
+      category: 'entrees',
+      name: 'Lobster Thermidor',
+      description: 'Fresh lobster in creamy cognac sauce with herbs',
+      price: 45.00,
+      image: '/istockphoto-1386533522-612x612.jpg',
+      dietary: ['gluten-free'],
+      servingSize: 'Per person'
+    },
+    {
+      id: 13,
+      category: 'entrees',
+      name: 'Rack of Lamb',
+      description: 'Herb-crusted lamb with rosemary jus and seasonal vegetables',
+      price: 38.00,
+      image: '/istockphoto-1406317293-1024x1024.jpg',
+      dietary: ['gluten-free'],
+      servingSize: 'Per person'
+    },
+    {
+      id: 14,
+      category: 'entrees',
+      name: 'Seafood Paella',
+      description: 'Traditional Spanish paella with fresh seafood and saffron rice',
+      price: 26.00,
+      image: '/istockphoto-1406318658-1024x1024.jpg',
+      dietary: ['gluten-free'],
+      servingSize: 'Per person'
+    },
+    // Wedding Packages
+    {
+      id: 15,
+      category: 'wedding',
+      name: 'Wedding Celebration Package',
+      description: 'Complete wedding catering with elegant presentation and premium service',
+      price: 85.00,
+      image: '/ctg2.jpg',
+      dietary: ['customizable'],
+      servingSize: 'Per person'
+    },
+    {
+      id: 16,
+      category: 'wedding',
+      name: 'Luxury Wedding Experience',
+      description: 'Premium wedding package with multiple courses and champagne service',
+      price: 120.00,
+      image: '/ctg.jpg',
+      dietary: ['customizable'],
+      servingSize: 'Per person'
+    },
+    // Side Dishes
+    {
+      id: 17,
+      category: 'sides',
+      name: 'Truffle Mac & Cheese',
+      description: 'Creamy mac and cheese with truffle oil and breadcrumb topping',
+      price: 8.00,
+      image: '/pexels-juliomelanda-1448721.jpg',
+      dietary: ['vegetarian'],
+      servingSize: 'Per person'
+    },
+    {
+      id: 18,
+      category: 'sides',
+      name: 'Roasted Seasonal Vegetables',
+      description: 'Fresh seasonal vegetables roasted with herbs and olive oil',
+      price: 6.50,
+      image: '/pexels-karography-438592595-16331112.jpg',
+      dietary: ['vegan', 'gluten-free'],
+      servingSize: 'Per person'
+    },
+    {
+      id: 19,
+      category: 'sides',
+      name: 'Garlic Herb Potatoes',
+      description: 'Roasted baby potatoes with fresh herbs and garlic',
+      price: 5.75,
+      image: '/pexels-lum3n-44775-1410235.jpg',
+      dietary: ['vegan', 'gluten-free'],
+      servingSize: 'Per person'
+    },
+    {
+      id: 20,
+      category: 'sides',
+      name: 'Wild Rice Pilaf',
+      description: 'Aromatic wild rice with almonds, cranberries, and herbs',
+      price: 7.25,
+      image: '/pexels-matheus-lara-1785960246-29111982.jpg',
+      dietary: ['vegan', 'gluten-free'],
+      servingSize: 'Per person'
+    },
     // Desserts
     {
-      id: 7,
+      id: 21,
       category: 'desserts',
       name: 'Chocolate Lava Cake',
       description: 'Warm chocolate cake with molten center and vanilla ice cream',
@@ -92,7 +235,7 @@ const MenuPage = () => {
       servingSize: 'Per person'
     },
     {
-      id: 8,
+      id: 22,
       category: 'desserts',
       name: 'Tiramisu',
       description: 'Classic Italian dessert with coffee-soaked ladyfingers',
@@ -100,6 +243,37 @@ const MenuPage = () => {
       image: '/pexels-pnw-prod-8995668.jpg',
       dietary: ['vegetarian'],
       servingSize: 'Per person'
+    },
+    {
+      id: 23,
+      category: 'desserts',
+      name: 'Crème Brûlée',
+      description: 'Classic French custard with caramelized sugar topping',
+      price: 9.25,
+      image: '/pexels-nicole-michalou-5779183.jpg',
+      dietary: ['vegetarian', 'gluten-free'],
+      servingSize: 'Per person'
+    },
+    // Beverages
+    {
+      id: 24,
+      category: 'beverages',
+      name: 'Premium Wine Selection',
+      description: 'Curated selection of red and white wines',
+      price: 12.00,
+      image: '/pexels-pixabay-302457.jpg',
+      dietary: [],
+      servingSize: 'Per glass'
+    },
+    {
+      id: 25,
+      category: 'beverages',
+      name: 'Artisan Coffee Service',
+      description: 'Freshly brewed premium coffee with cream and sugar service',
+      price: 4.50,
+      image: '/logo.png',
+      dietary: ['vegetarian'],
+      servingSize: 'Per cup'
     }
   ];
 

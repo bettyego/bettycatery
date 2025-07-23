@@ -52,7 +52,7 @@ const CTASection = () => {
                 <HiMail className="h-8 w-8" />
               </div>
               <h3 className="text-xl font-semibold mb-2">Email Us</h3>
-              <p className="opacity-90">info@bettycatery.com</p>
+              <p className="opacity-90">nwabethroseonuoha@gmail.com</p>
               <p className="text-sm opacity-75">24/7 Response</p>
             </div>
 

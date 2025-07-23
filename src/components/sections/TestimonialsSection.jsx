@@ -21,9 +21,9 @@ const TestimonialsSection = () => {
       name: 'Michael Chen',
       role: 'Groom',
       company: 'Wedding Client',
-      image: '/pexels-beyza-c-555707524-28983185.jpg',
+      image: '/ctg2.jpg',
       rating: 5,
-      text: 'Our wedding day was perfect thanks to Betty Catery. From the initial tasting to the final cleanup, everything was flawless. The food was delicious and beautifully presented. Highly recommended!'
+      text: 'Our wedding day was perfect thanks to Lady B\'s Catering Service. From the initial tasting to the final cleanup, everything was flawless. The food was delicious and beautifully presented. Highly recommended!'
     },
     {
       name: 'Emily Rodriguez',

@@ -1,16 +1,24 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Layout from '../layout/Layout';
 import Card from '../ui/Card';
 import Button from '../ui/Button';
 import Input from '../ui/Input';
-import { 
-  HiPhone, 
-  HiMail, 
-  HiLocationMarker, 
+import EnhancedContactForm from '../features/EnhancedContactForm';
+import QuoteCalculator from '../features/QuoteCalculator';
+import WhatsAppButton, { WhatsAppTemplates } from '../features/WhatsAppButton';
+import {
+  HiPhone,
+  HiMail,
+  HiLocationMarker,
   HiClock,
   HiCalendar,
   HiUsers
 } from 'react-icons/hi';
+import {
+  FaFacebook,
+  FaInstagram,
+  FaLinkedin
+} from 'react-icons/fa';
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({
@@ -40,20 +48,20 @@ const ContactPage = () => {
     {
       icon: HiPhone,
       title: 'Phone',
-      details: '+1 (555) 123-4567',
+      details: '+234 806 411 1501',
       subtitle: 'Mon-Fri: 8AM-8PM'
     },
     {
       icon: HiMail,
       title: 'Email',
-      details: 'info@bettycatery.com',
+      details: 'nwabethroseonuoha@gmail.com',
       subtitle: '24/7 Response'
     },
     {
       icon: HiLocationMarker,
       title: 'Address',
-      details: '123 Catering Street',
-      subtitle: 'Food City, FC 12345'
+      details: 'Abuja, Nigeria',
+      subtitle: 'Federal Capital Territory'
     },
     {
       icon: HiClock,
@@ -334,8 +342,47 @@ const ContactPage = () => {
                   <div className="text-center text-gray-500">
                     <HiLocationMarker className="h-12 w-12 mx-auto mb-2" />
                     <p>Interactive Map</p>
-                    <p className="text-sm">123 Catering Street, Food City, FC 12345</p>
+                    <p className="text-sm">Abuja, Nigeria</p>
                   </div>
+                </div>
+              </Card>
+
+              {/* Social Media */}
+              <Card padding="lg" className="text-center">
+                <h3 className="text-lg font-semibold text-gray-900 mb-4">
+                  Follow Us
+                </h3>
+                <p className="text-gray-600 mb-6">
+                  Stay connected for the latest updates and culinary inspirations
+                </p>
+                <div className="flex justify-center space-x-6">
+                  <a
+                    href="https://www.facebook.com/share/1ApYd8KChU/?mibextid=wwXIfr"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-12 h-12 bg-blue-600 hover:bg-blue-700 rounded-full flex items-center justify-center text-white transition-colors duration-200"
+                    aria-label="Follow us on Facebook"
+                  >
+                    <FaFacebook className="h-6 w-6" />
+                  </a>
+                  <a
+                    href="https://www.instagram.com/be.thel1513?igsh=YmVmNHB4ejUzbXVx"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-12 h-12 bg-gradient-to-br from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 rounded-full flex items-center justify-center text-white transition-all duration-200"
+                    aria-label="Follow us on Instagram"
+                  >
+                    <FaInstagram className="h-6 w-6" />
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/in/onuoha-mba-bethel-nwakaego-07987b368?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-12 h-12 bg-blue-700 hover:bg-blue-800 rounded-full flex items-center justify-center text-white transition-colors duration-200"
+                    aria-label="Connect with us on LinkedIn"
+                  >
+                    <FaLinkedin className="h-6 w-6" />
+                  </a>
                 </div>
               </Card>
             </div>
@@ -383,6 +430,60 @@ const ContactPage = () => {
                 </p>
               </Card>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Enhanced Contact Form Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Get Your Personalized Quote
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Use our enhanced quote form for a more detailed and accurate estimate for your event.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <EnhancedContactForm
+              onSubmitSuccess={(data) => {
+                console.log('Quote request submitted:', data);
+              }}
+            />
+            <QuoteCalculator
+              onQuoteGenerated={(quote) => {
+                console.log('Quote generated:', quote);
+              }}
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* Quick Contact Options */}
+      <section className="py-16 bg-orange-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+            Need Immediate Assistance?
+          </h2>
+          <p className="text-lg text-gray-600 mb-8">
+            Get instant answers to your questions through WhatsApp or give us a call.
+          </p>
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <WhatsAppButton
+              variant="button"
+              message={WhatsAppTemplates.quote}
+              className="text-lg px-8 py-4"
+            />
+            <a
+              href="tel:+2348064111501"
+              className="inline-flex items-center justify-center px-8 py-4 bg-orange-500 hover:bg-orange-600 text-white font-medium rounded-lg transition-all duration-300 text-lg"
+            >
+              <HiPhone className="mr-2" />
+              Call Now: +234 806 411 1501
+            </a>
           </div>
         </div>
       </section>

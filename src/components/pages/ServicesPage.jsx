@@ -45,7 +45,7 @@ const ServicesPage = () => {
         'Cocktail hour service',
         'Reception dining'
       ],
-      image: '/pexels-jonathanborba-29098366.jpg',
+      image: '/ctg2.jpg',
       startingPrice: 45,
       color: 'bg-pink-500'
     },
@@ -61,7 +61,7 @@ const ServicesPage = () => {
         'Retirement celebrations',
         'Holiday gatherings'
       ],
-      image: '/pexels-daisy-anderson-5584276.jpg',
+      image: '/ctg6.jpg',
       startingPrice: 25,
       color: 'bg-purple-500'
     },

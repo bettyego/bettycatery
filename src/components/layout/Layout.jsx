@@ -1,7 +1,7 @@
-import React from 'react';
 import Header from './Header';
 import Footer from './Footer';
 import SEOHead from '../SEO/SEOHead';
+import WhatsAppButton from '../features/WhatsAppButton';
 
 const Layout = ({
   children,
@@ -37,6 +37,8 @@ const Layout = ({
         {showFooter && (
           <Footer role="contentinfo" />
         )}
+
+        <WhatsAppButton />
       </div>
     </>
   );
